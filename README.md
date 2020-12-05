@@ -1,4 +1,4 @@
-# beetrader
+# my-intro
 
 ## Project setup
 ```
