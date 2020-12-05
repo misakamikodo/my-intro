@@ -1,0 +1,333 @@
+//必须分两个，因为定义的scss会在每次prependData都会引入
+@import "properties";
+/*修改系统演示*/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*手机 H5*/
+.H5-input {
+  width: fill-available;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: $text-size-base;
+  display: block;
+  padding: $spacing-col-base $spacing-row-base;
+  background-color: #FFF;
+  border: none;
+}
+
+.H5-input-primary {
+
+}
+
+.H5-btn {
+  width: fill-available;
+  position: relative;
+  display: block;
+  padding-left: 14px;
+  padding-right: 14px;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+  line-height: 2.55555556;
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+  color: #FFF;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: $color-primary;
+  border: 1px solid $color-primary;
+  border-radius: $border-radius-base;
+  font-size: $text-size-base;
+}
+
+.H5-btn:disabled {
+  opacity: 0.5;
+}
+
+.H5-btn-primary {
+  background-color: $color-primary;
+  border: 1px solid $color-primary;
+}
+
+.info {
+  margin: 60px $spacing-row-base;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media screen and (max-width: 768px) {
+    margin: 20px $spacing-row-base;
+  }
+
+  h1 {
+    position: fixed;
+    top: $spacing-col-lg;
+    left: $spacing-row-lg
+  }
+}
+
+.cont {
+  padding: $spacing-row-lg $spacing-col-lg;
+  width: 60%;
+}
+
+/*pc主题*/
+.unselected {
+  user-select: none;
+}
+
+.pc-anim {
+  -webkit-animation-duration: .3s;
+  animation-duration: .3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both
+}
+
+.pc-anim.ccyicon {
+  display: inline-block
+}
+
+.pc-disabled, .pc-disabled:hover {
+  color: $text-color-disable !important;
+  cursor: not-allowed !important;
+}
+
+/*动画*/
+.pc-anim-loop {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite
+}
+
+.pc-anim {
+  -webkit-animation-duration: .3s;
+  animation-duration: .3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both
+}
+
+.pc-anim.ccyicon {
+  display: inline-block
+}
+
+.pc-anim-loop {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite
+}
+
+.pc-trans, .pc-trans a {
+  transition: all .3s;
+  -webkit-transition: all .3s
+}
+
+@-webkit-keyframes pc-rotate {
+  from {
+    -webkit-transform: rotate(0)
+  }
+
+  to {
+    -webkit-transform: rotate(360deg)
+  }
+}
+
+@keyframes pc-rotate {
+  from {
+    transform: rotate(0)
+  }
+
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+.pc-anim-rotate {
+  -webkit-animation-name: pc-rotate;
+  animation-name: pc-rotate;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear
+}
+
+@-webkit-keyframes pc-up {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    opacity: .3
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    opacity: 1
+  }
+}
+
+@keyframes pc-up {
+  from {
+    transform: translate3d(0, 100%, 0);
+    opacity: .3
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1
+  }
+}
+
+.pc-anim-up {
+  -webkit-animation-name: pc-up;
+  animation-name: pc-up
+}
+
+@-webkit-keyframes pc-upbit {
+  from {
+    -webkit-transform: translate3d(0, 30px, 0);
+    opacity: .3
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    opacity: 1
+  }
+}
+
+@keyframes pc-upbit {
+  from {
+    transform: translate3d(0, 30px, 0);
+    opacity: .3
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1
+  }
+}
+
+.pc-anim-upbit {
+  -webkit-animation-name: pc-upbit;
+  animation-name: pc-upbit
+}
+
+@-webkit-keyframes pc-scale {
+  0% {
+    opacity: .3;
+    -webkit-transform: scale(.5)
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1)
+  }
+}
+
+@keyframes pc-scale {
+  0% {
+    opacity: .3;
+    -ms-transform: scale(.5);
+    transform: scale(.5)
+  }
+
+  100% {
+    opacity: 1;
+    -ms-transform: scale(1);
+    transform: scale(1)
+  }
+}
+
+.pc-anim-scale {
+  -webkit-animation-name: pc-scale;
+  animation-name: pc-scale
+}
+
+@-webkit-keyframes pc-scale-spring {
+  0% {
+    opacity: .5;
+    -webkit-transform: scale(.5)
+  }
+
+  80% {
+    opacity: .8;
+    -webkit-transform: scale(1.1)
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1)
+  }
+}
+
+@keyframes pc-scale-spring {
+  0% {
+    opacity: .5;
+    transform: scale(.5)
+  }
+
+  80% {
+    opacity: .8;
+    transform: scale(1.1)
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+.pc-anim-scaleSpring {
+  -webkit-animation-name: pc-scale-spring;
+  animation-name: pc-scale-spring
+}
+
+@-webkit-keyframes pc-fadein {
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+@keyframes pc-fadein {
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+.pc-anim-fadein {
+  -webkit-animation-name: pc-fadein;
+  animation-name: pc-fadein
+}
+
+@-webkit-keyframes pc-fadeout {
+  0% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 0
+  }
+}
+
+@keyframes pc-fadeout {
+  0% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 0
+  }
+}
+
+.pc-anim-fadeout {
+  -webkit-animation-name: pc-fadeout;
+  animation-name: pc-fadeout
+}
